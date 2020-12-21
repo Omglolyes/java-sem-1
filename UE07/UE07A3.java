@@ -5,33 +5,36 @@ import java.util.Arrays;
 
 public class UE07A3 {
     public static void main(String args[]) {
-        int[] a = merge(new int[] { -2, 3, 9, 10 }, new int[] { 1, 5, 7 });
-        System.out.println(Arrays.toString(a));
+        int[] erg = merge(new int[] { -2, 3, 9, 10 }, new int[] { 1, 5, 7, 9, -13 });
+        System.out.println(Arrays.toString(erg));
     }
 
     public static int[] merge(int[] a, int[] b) {
         int[] c = new int[a.length + b.length];
-        for (int n = 0; n <= a.length - 1; n++) {
-            c[n] = a[n];
+        int z1 = 0;
+        int z2 = 0;
+
+        for (int n = 0; n < c.length; n++) {
+            c[n] = (z1 < a.length && z2 < b.length && a[z1] < b[z2]) ? a[z1++] : b[z2++];
+            // TODO: Von Phil unsere Lösung holen
         }
-        for (int n = 0; n <= b.length - 1; n++) {
-            c[a.length + n] = b[n];
-        }
-        c = arraySort(c);
         return c;
     }
 
-    public static int[] arraySort(int[] a) {
-        for (int i = 0; i < a.length; i++) {
-            for (int j = (i + 1); j < a.length; j++) {
-                // if current pos is greater, swap it with the next pos
-                if (a[i] > a[j]) {
-                    int x = a[i];
-                    a[i] = a[j];
-                    a[j] = x;
-                }
-            }
+    public static int[] mergeKoll(int[] a, int[] b) {
+        int[] ergebnis = new int[a.length + b.length];
+        int iA = 0;
+        int iB = 0;
+        for (int i = 0; i < ergebnis.length; i++) {
+            if (iA >= a.length)
+                ergebnis[i] = b[iB++];
+            else if (iB >= b.length)
+                ergebnis[i] = a[iA++];
+            else if (a[iA] < b[iB])
+                ergebnis[i] = a[iA++];
+            else
+                ergebnis[i] = b[iB++];
         }
-        return a;
+        return ergebnis;
     }
 }

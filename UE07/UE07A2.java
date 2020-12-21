@@ -1,7 +1,9 @@
 package UE07;
 
 public class UE07A2 {
+    static int kugel = 0;
     public static void main(String args[]) {
+        
         Weihnachtsbaum(18);
     }
 
@@ -11,22 +13,22 @@ public class UE07A2 {
             return;
         }
 
-        for (int i = 0; i <= n; i++) {
-            printSpaces(i, n);
-            plantTree(i, n);
+        for (int i = 0; i < n; i++) {
+            printSpace(n, i);
+            printTree(n, i);
             System.out.println("*");
         }
-    }
 
-    public static void printSpaces(int i, int n) {
-        for (int j = 0; j <= n - i; j++) {
+        
+    }
+    public static void printSpace(int n, int i){
+        for (int j = 0; j < n - i - 1; j++) {
             System.out.print(" ");
         }
     }
-
-    public static void plantTree(int i, int n) {
+    public static void printTree(int n, int i){
         for (int j = 0; j / 2 < i; j++) {
-            System.out.print("*");
+            System.out.print((++kugel % 10 == 0) ? "o" : "*");
         }
     }
 }
