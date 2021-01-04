@@ -3,10 +3,11 @@ package Bonusaufgabe;
 import java.util.Scanner;
 
 public class Bonus3 {
-    public static void main(String args[]) {
-        char[][] field = Bonusaufgabe.GameOfLife.testField();
+    public static void main(String args[]) throws Exception {
+        // char[][] field = Bonusaufgabe.GameOfLife.testField();
+        char[][] field = Bonusaufgabe.Bonus1.erstelleFeld(50);
         Bonusaufgabe.GameOfLife.printField(field);
-        System.out.println("Geben Sie n für die Zeilen/- Spaltenzahl ein: ");
+        System.out.println("Anzahl Generationen: ");
         Scanner sc = new Scanner(System.in);
         gameOfLife2(field, sc.nextInt());
         sc.close();
@@ -14,22 +15,22 @@ public class Bonus3 {
 
     public static void gameOfLife2(char[][] field, int t) {
         for (int step = 0; step < t; step++) {
-            field = nextGen(field);
+            field = nextGen(field, step);
             Bonusaufgabe.GameOfLife.printField(field);
         }
     }
 
-    private static char[][] nextGen(char[][] field) {
+    private static char[][] nextGen(char[][] field, int step) {
         char[][] newField = new char[field.length][field.length];
         for (int i = 0; i < field.length; i++) {
             for (int j = 0; j < field.length; j++) {
-                newField[i][j] = cellIsLive_5(field, i, j) ? '+' : '-';
+                newField[i][j] = cellIsLive_5(field, i, j, step) ? '+' : '-';
             }
         }
         return newField;
     }
 
-    private static boolean cellIsLive_5(char[][] field, int x, int y) {
+    private static boolean cellIsLive_5(char[][] field, int x, int y, int step) {
         int liveNeighbours = 0;
         int liveOuterNeighbours = 0;
 
@@ -69,7 +70,7 @@ public class Bonus3 {
 
         if (liveOuterNeighbours + (2 * liveOuterNeighbours) > 10)
             return false;
-        if (liveOuterNeighbours > 8)
+        if (liveOuterNeighbours > step / 3)
             return true;
         if (liveNeighbours == 3)
             return true;
