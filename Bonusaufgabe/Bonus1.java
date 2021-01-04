@@ -7,7 +7,7 @@ public class Bonus1 {
         System.out.println("Geben Sie n für die Zeilen/- Spaltenzahl ein: ");
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        Bonusaufgabe.GameOfLife.printField(erstelleFeld(n));
+        Bonusaufgabe.utils.printField(erstelleFeld(n));
         sc.close();
     }
 

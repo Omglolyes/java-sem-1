@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Bonus2 {
     public static void main(String[] args) {
-        char[][] field = Bonusaufgabe.GameOfLife.testField();
-        Bonusaufgabe.GameOfLife.printField(field);
+        char[][] field = Bonusaufgabe.utils.testField();
+        Bonusaufgabe.utils.printField(field);
         Scanner sc = new Scanner(System.in);
         System.out.println("Geben Sie n für die Zeilen/- Spaltenzahl ein: ");
         gameOfLife(field, sc.nextInt());
@@ -16,7 +16,7 @@ public class Bonus2 {
         for (int step = 0; step < t; step++) {
             field = nextGen(field);
             System.out.println("Gen: " + (step + 1));
-            Bonusaufgabe.GameOfLife.printField(field);
+            Bonusaufgabe.utils.printField(field);
         }
     }
 

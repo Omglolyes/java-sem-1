@@ -1,6 +1,6 @@
 package Bonusaufgabe;
 
-public class GameOfLife {
+public class utils {
     public static void printField(char[][] field) {
         System.out.print("  ");
         for (int i = 0; i < field[0].length; i++) {

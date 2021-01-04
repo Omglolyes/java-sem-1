@@ -6,7 +6,7 @@ public class Bonus3 {
     public static void main(String args[]) throws Exception {
         // char[][] field = Bonusaufgabe.GameOfLife.testField();
         char[][] field = Bonusaufgabe.Bonus1.erstelleFeld(50);
-        Bonusaufgabe.GameOfLife.printField(field);
+        Bonusaufgabe.utils.printField(field);
         System.out.println("Anzahl Generationen: ");
         Scanner sc = new Scanner(System.in);
         gameOfLife2(field, sc.nextInt());
@@ -16,7 +16,7 @@ public class Bonus3 {
     public static void gameOfLife2(char[][] field, int t) {
         for (int step = 0; step < t; step++) {
             field = nextGen(field, step);
-            Bonusaufgabe.GameOfLife.printField(field);
+            Bonusaufgabe.utils.printField(field);
         }
     }
 
