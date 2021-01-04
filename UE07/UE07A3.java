@@ -10,15 +10,31 @@ public class UE07A3 {
     }
 
     public static int[] merge(int[] a, int[] b) {
-        int[] c = new int[a.length + b.length];
-        int z1 = 0;
-        int z2 = 0;
+        int[] ergebnis = new int[a.length + b.length];
 
-        for (int n = 0; n < c.length; n++) {
-            c[n] = (z1 < a.length && z2 < b.length && a[z1] < b[z2]) ? a[z1++] : b[z2++];
-            // TODO: Von Phil unsere Lösung holen
+        for (int i = 0; i < a.length; i++) {
+            ergebnis[i] = a[i];
         }
-        return c;
+
+        for (int i = 0; i < b.length; i++) {
+            ergebnis[a.length + i] = b[i];
+        }
+        sort(ergebnis);
+
+        return ergebnis;
+    }
+
+    public static void sort(int[] c) {
+        for (int i = 0; i < c.length - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < c.length; j++)
+                if (c[j] < c[minIndex])
+                    minIndex = j;
+            int zw = c[i];
+            c[i] = c[minIndex];
+            c[minIndex] = zw;
+        }
+
     }
 
     public static int[] mergeKoll(int[] a, int[] b) {
