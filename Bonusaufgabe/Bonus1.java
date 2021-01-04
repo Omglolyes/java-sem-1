@@ -40,14 +40,14 @@ public class Bonus1 {
         for (int i = 0; i < n / 4; i++) {
             // R top and middle row
             feld[1][1 + i] = '+';
-            feld[n / 4][1 + i] = '+';
+            feld[n / 4][2 + i] = '+';
         }
         for (int i = 0; i < n / 4; i++) {
             // R arc
             // Basically line that gehts mirrored, half-way.
             // this loop starts at n/4 + 0 and will move down-right, diagonally
-            // until it will get mirrored at the vertically, at (n/4 + n/8)
-            feld[1 + i][(i < n / 8) ? ((n / 4) + i) : ((n / 2) - i - 1)] = '+';
+            // until it willget mirrored at the vertically, at (n/4 + n/8)
+            feld[1 + i][(i <= n / 8) ? ((n / 4) + i) : ((n / 2) - i)] = '+';
         }
         for (int i = n / 4; i <= n / 2; i++) {
             // R Diagonale
