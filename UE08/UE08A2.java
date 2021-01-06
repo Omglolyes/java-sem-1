@@ -1,4 +1,4 @@
-package UR08;
+package UE08;
 
 public class UE08A2 {
     // 6 System.out.println(erstePerson.getVorname());
