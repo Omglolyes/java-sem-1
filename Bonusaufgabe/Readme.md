@@ -1,6 +1,6 @@
 # Bonusaufgabe EidP
 
-Von: Raiden Erdmann, 
+Von: Raiden Erdmann,
 
 Studiengang: Wirtschaftsinformatik
 
@@ -22,8 +22,8 @@ Kniffelig wird es allerdings bei Rundungen. Da einfache Iterationsschleifen von 
 
 Eine davon war es mit einer for-Schleife zwei Linien zu zeichnen, welche von der oberen Horizontale und der mittigen des `R`'s ausgehen und diagonal so verlaufen, dass sie sich in der Mitte treffen. Hierbei war ein Problem, dass die Mitte, bei ungeraden Zahlen nicht nicht immer geschlossen war. So gab es eine Lücke, an der Spitze des Daches `>`.
 
-Um eine komplette Rundung zu verwirklichen, habe ich probiert die koordinaten der Kurve über die Mathematische Kreisformel 
-$$c = x^2+y^2$$ 
+Um eine komplette Rundung zu verwirklichen, habe ich probiert die koordinaten der Kurve über die Mathematische Kreisformel
+$$c = x^2+y^2$$
 zu berechnen. Hier wäre `c = n` der Radius des Halbkreises und y^2 wäre eine Zelle von `char[][]`. Der Ansatz war es die Spalte zu berechnen:
 
 ```java
@@ -125,6 +125,7 @@ Ein zweites Objekt ist der `Glider`, welcher über das Feld wandert.
 Für c habe ich die Regeln von `Game of Life` erweitert. Es gibt nun eine dynamische Regel, die das Spiel über die Generationen unterscheidlich stark beinflusst.
 
 Nachdem die bekannten Regeln angewendet wurden, werden die 'äußeren' Zellen ausgewertet:
+
 ```java
 for (int i = x - 2; i < x + 3; i++) {
     try {
@@ -145,6 +146,7 @@ for (int i = y - 1; i < y + 2; i++) {
     }
 }
 ```
+
 Und anschließend die Neuen Regeln angewendet:
 
 ```java
@@ -157,8 +159,9 @@ if (liveOuterNeighbours > 8)
 Die Bedingung, dass nach `n`/2 Generationen noch immer lebendige Zellen existieren, jedoch nach geraumer Zeit nicht mehr, ist jedoch schwierig. Es gibt immer wieder bestimmte `n` bei denen Objekte entstehen, wie z.B. ein Quadrat aus 4 Zellen, welche nach der Urspünglichen Implementierung nicht sterben. Auf der anderen Seite gibt es wieder Ausgangszustände, bei denen nach 4 Generationen das Feld leer ist. Ich habe leider keine Regel gefunden, bei der ausnahmslos für ein beliebiges n, diese Bedingungen eingehalten werden.
 
 ## Quellen
-- Allg. Regeln: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
-- Regelimplementierung (für Verständnis): https://github.com/MarioTalevski/game-of-life/blob/abe131dd5d212fd2c044fb827137a964c98551ea/GameOfLife.cpp#L230
-- Ein wenig Historie: https://www.youtube.com/watch?v=R9Plq-D1gEk&ab_channel=Numberphile
+
+- Allg. Regeln: <https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life>
+- Regelimplementierung (für Verständnis): <https://github.com/MarioTalevski/game-of-life/blob/abe131dd5d212fd2c044fb827137a964c98551ea/GameOfLife.cpp#L230>
+- Ein wenig Historie: <https://www.youtube.com/watch?v=R9Plq-D1gEk&ab_channel=Numberphile>
 
 ## Bestätigung
