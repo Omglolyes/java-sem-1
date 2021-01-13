@@ -8,11 +8,14 @@ public class Girokonto {
     private static int anzahlKonten;
 
     public Girokonto() {
-        String anzahlKontenString = String.valueOf(++anzahlKonten);
-        for (int i = 0; i < 10 - anzahlKontenString.length(); i++) {
-            anzahlKontenString = "0" + anzahlKontenString;
-        }
-        this.kontonummer = "0822" + anzahlKontenString;
+        // Meine Lösung
+        // String anzahlKontenString = String.valueOf(++anzahlKonten);
+        // for (int i = 0; i < 10 - anzahlKontenString.length(); i++) {
+        // anzahlKontenString = "0" + anzahlKontenString;
+        // }
+        // this.kontonummer = "0822" + anzahlKontenString;
+
+        this.kontonummer = "0" + (++anzahlKonten + 8220000);
     }
 
     public String getKontonummer() {
