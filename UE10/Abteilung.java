@@ -1,6 +1,4 @@
-
 public class Abteilung {
-
     private String bezeichnung;
     private Mitarbeiter mitarbeiter[] = new Mitarbeiter[15];
     public int anzahl;
