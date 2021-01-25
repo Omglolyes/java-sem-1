@@ -1,3 +1,5 @@
+package UE10;
+
 public class Mitarbeiterverwaltung {
     public static void main(String[] args) {
         Abteilung vertrieb = new Abteilung("Vertrieb");

@@ -1,3 +1,5 @@
+package UE10;
+
 public class Mitarbeiter {
     private String name;
     private int personalnummer;
