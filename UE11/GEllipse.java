@@ -1,3 +1,5 @@
+package UE11;
+
 public class GEllipse extends GObjekt {
 
     protected int posX;

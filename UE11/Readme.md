@@ -36,13 +36,18 @@ class B extends A
 {
     private B(String name) // public B(String name)
     {
-        super.name = name; // zugriff auf privates attribut
+        super.name = name; // super(name);
     }
 }
 ```
 
 ```java
-class C extends A{}
+class C extends A
+{
+    // public C(String name) {
+    //     super(name);
+    // }
+}
 ```
 
 ```java
@@ -52,8 +57,7 @@ class Haupt
     {
         A einA = new A("Hugo");
         B einB = new B("Paul");
-        // C einC = new C();
-        // This goes not
+        C einC = new C(); // new C("Gertrud")
     }
 }
 ```
