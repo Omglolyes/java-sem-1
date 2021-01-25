@@ -1,3 +1,5 @@
+package UE10;
+
 public class Abteilung {
     private String bezeichnung;
     private Mitarbeiter mitarbeiter[] = new Mitarbeiter[15];
