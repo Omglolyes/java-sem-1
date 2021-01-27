@@ -1,6 +1,6 @@
 package UE11;
 
-public class GRechteck {
+public class A2_GRechteck {
     public void zeichnen() {
         // do stuff;
     }
