@@ -32,12 +32,11 @@ public class MitarbeiterTest {
             produktion.addMitarbeiter(arbeiter);
         }
 
-        for(var abt: new Abteilung[]{vertrieb, produktion}){
+        for (var abt : new Abteilung[] { vertrieb, produktion }) {
             System.out.println(abt.getBezeichnung() + " anz Mitarbeiter: " + abt.getAnzahlMitarbeiter());
             System.out.println(abt.getBezeichnung() + " anz Angestelle: " + abt.getAnzahlAngestellte());
             System.out.println(abt.getBezeichnung() + " Bezeichnung: " + abt.getBezeichnung());
             System.out.println(abt.getBezeichnung() + " Gehaltskosten: " + abt.berechneGehaltskosten());
         }
-
     }
 }
