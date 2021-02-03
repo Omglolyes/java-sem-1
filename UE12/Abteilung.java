@@ -32,21 +32,18 @@ public class Abteilung {
     }
 
     public int getAnzahlAngestellte() {
-        int i = 0;
-        for (var kollege : dieMitarbeiter) {
-            if (kollege instanceof Angestellter) {
-                i++;
+        int j = 0;
+        for (int i = 0; i < getAnzahlMitarbeiter(); i++) {
+            if (dieMitarbeiter[i] instanceof Angestellter) {
+                j++;
             }
         }
-        return i;
+        return j;
     }
 
     public double berechneGehaltskosten() {
         double gesamtGehalt = 0.0;
-        // for (var kollege : dieMitarbeiter) {
-        //     gesamtGehalt += kollege.berechneGehalt();
-        // }
-        for(int i = 0; i < getAnzahlMitarbeiter(); i++){
+        for (int i = 0; i < getAnzahlMitarbeiter(); i++) {
             gesamtGehalt += dieMitarbeiter[i].berechneGehalt();
         }
         return gesamtGehalt;

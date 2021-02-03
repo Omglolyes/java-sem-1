@@ -3,7 +3,7 @@ package UE12;
 public class MitarbeiterTest {
     public static void main(String[] args) {
         Abteilung vertrieb = new Abteilung("Vertrieb");
-        Abteilung produktion = new Abteilung("Porduktion");
+        Abteilung produktion = new Abteilung("Produktion");
 
         Geschaeftsfuehrer peter = new Geschaeftsfuehrer("Peter", 2, 1, 0);
         Geschaeftsfuehrer fabienne = new Geschaeftsfuehrer("Fabienne", 3, 1, 1);
@@ -32,15 +32,12 @@ public class MitarbeiterTest {
             produktion.addMitarbeiter(arbeiter);
         }
 
-        // Abteilungen
-        System.out.println("Vertrieb anz Mitarbeiter: " + vertrieb.getAnzahlMitarbeiter());
-        System.out.println("Vertrieb anz Angestelle: " + vertrieb.getAnzahlAngestellte());
-        System.out.println("Vertrieb Bezeichnung: " + vertrieb.getBezeichnung());
-        System.out.println("Vertrieb Gehaltskosten: " + vertrieb.berechneGehaltskosten());
-        System.out.println("Produktion anz Mitarbeiter: " + produktion.getAnzahlMitarbeiter());
-        System.out.println("Produktion anz Angestelle: " + produktion.getBezeichnung());
-        System.out.println("Produktion Bezeichnung: " + produktion.berechneGehaltskosten());
-        System.out.println("Produktion Gehaltskosten: " + produktion.getAnzahlAngestellte());
+        for(var abt: new Abteilung[]{vertrieb, produktion}){
+            System.out.println(abt.getBezeichnung() + " anz Mitarbeiter: " + abt.getAnzahlMitarbeiter());
+            System.out.println(abt.getBezeichnung() + " anz Angestelle: " + abt.getAnzahlAngestellte());
+            System.out.println(abt.getBezeichnung() + " Bezeichnung: " + abt.getBezeichnung());
+            System.out.println(abt.getBezeichnung() + " Gehaltskosten: " + abt.berechneGehaltskosten());
+        }
 
     }
 }
