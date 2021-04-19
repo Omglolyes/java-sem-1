@@ -1,4 +1,4 @@
-# java-sem-1
+# sem1-EidP
 
 Die Lösungen zu den Aufgaben aus EidP - Sem 1
 
