@@ -23,8 +23,7 @@ public class GirokontoTest {
 
         // alle konten
         Girokonto[] konten = new Girokonto[] { girokonto1, girokonto2, girokonto3 };
-        for (Girokonto konto : konten) {
+        for (Girokonto konto : konten)
             System.out.println(konto);
-        }
     }
 }

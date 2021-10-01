@@ -4,7 +4,7 @@ Die Lösungen zu den Aufgaben aus EidP - Sem 1
 
 ## Setup
 
-Download [JDK 15.0.1](https://d.computerbild.de/downloads/4716198/jdk-15.0.1_windows-x64_bin.exe?__cbodl__=1611742724_bbf4af1e234150cff53301b8ca9cdbac&_chksum_=284e90f66d2d673cf428906b92fba304)
+Download [JDK 15.0.2](https://www.oracle.com/in/java/technologies/javase-jdk15-downloads.html)
 
 Install VS Code and [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
 
